@@ -14,10 +14,8 @@
 ## 2. Artifacts đã xây dựng 🛠️
 
 ### 2.1. Use Case Diagrams 🎯
-- **Student**: đăng nhập 🔑, tham gia khóa học 📚, xem tài liệu 📄, làm bài tập/quiz ✏️, thi 📝, xem tiến độ 📊, nhận huy hiệu 🏅.  
-- **Teacher**: tạo chủ đề 🗂️, ra đề 📑, quản lý câu hỏi ❓, chấm điểm ✅, tổ chức meeting online 💻.  
-- **Admin**: quản lý user 👥, môn học 📖, gói subscription 💳, thống kê 📈.  
-- **System**: gửi thông báo 🔔, cập nhật leaderboard 🏆, nhắc deadline ⏰.  
+![Use Case Diagram](lab/lab2/usecase.png)
+
 ### 2.2. Sequence Diagrams 🔁
 #### 2.2.1. Luồng học của Student 👩‍🎓
 - Student đăng nhập 🔑  
