@@ -33,13 +33,12 @@
 ---
 
 ### 📌 Use Case chi tiết
-![Use Case chi tiết](../lab/lab03_ATM%20mini/USecaselab3.png)
+![Use Case chi tiết](https://github.com/n23dcpt094-phanngocthienminh/btapcnpm/blob/main/lab/lab03_ATM%20mini/USecaselab3.png?raw=true)
 
 ---
 
 ## 4. Sequence Diagram
-![Sequence Diagram - Đặt phòng khách sạn](../lab/lab03_ATM%20mini/Sqlab3.png)
-
+![Sequence Diagram - Đặt phòng khách sạn](https://github.com/n23dcpt094-phanngocthienminh/btapcnpm/blob/main/lab/lab03_ATM%20mini/Sqlab3.png?raw=true)
 
 ---
 
