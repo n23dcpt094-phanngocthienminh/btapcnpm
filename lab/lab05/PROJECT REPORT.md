@@ -1,106 +1,66 @@
-# 📘 Project Report – Hệ thống quản lý đặt phòng khách sạn
+# 📘 Báo Cáo Dự Án: Hệ Thống Quản Lý Đặt Phòng Khách Sạn
 
-## 1. Giới thiệu dự án 🚀
-- **Tên**: Hệ thống quản lý đặt phòng khách sạn 🏨
-- **Mục tiêu**:  
-  - Hỗ trợ khách đặt phòng trực tuyến nhanh chóng.  
-  - Giúp lễ tân quản lý check-in, check-out.  
-  - Hỗ trợ quản lý theo dõi báo cáo doanh thu.  
-  - Giúp bộ phận Housekeeping quản lý công việc dọn phòng.
-- **Quy mô**: Bài tập học tập (lab) – mức độ triển khai cơ bản theo database đã thiết kế.  
+## 1. Giới thiệu
 
----
-
-## 2. Artifacts đã xây dựng 🛠️
-
-### 2.1. Use Case Diagrams 🎯
-![Use Case Diagram](lab/lab02_usecase/use_case.png)
-
-### 2.2. Sequence Diagrams 🔁
-#### 2.2.1. Luồng học của Student 👩‍🎓
-- Student đăng nhập 🔑  
-- Chọn khóa học 📚 và xem tài liệu 📄  
-- Làm quiz/thi 📝  
-- Nhận điểm và thông báo 📊🔔  
-#### 2.2.2. Luồng nộp bài tập ✉️
-- Student upload file 📎  
-- Backend lưu file + metadata 🗄️  
-- Teacher nhận thông báo 👨‍🏫  
-- Teacher chấm điểm ✅ và gửi phản hồi 🔔  
-#### 2.2.3. Luồng thi chính thức (Exam) 📝
-- Student bắt đầu thi 🏁  
-- Trả lời câu hỏi ❓  
-- Hệ thống lưu kết quả 🗄️  
-- Tính điểm và gửi thông báo 📊🔔  
-#### 2.2.4. Luồng subscription & thanh toán 💳
-- User chọn gói 📦  
-- Thanh toán qua Payment Gateway 🧾  
-- Backend cập nhật `payments` + `subscriptions` 🗄️  
-- Thông báo kích hoạt gói 🔔  
-#### 2.2.5. Luồng job hệ thống ⏰
-- Cron job kiểm tra deadline ⏳  
-- Gửi nhắc nhở 🔔  
-- Backup dữ liệu 💾  
-- Cập nhật leaderboard 🏆  
-### 2.3. Database & ERD 🗄️ 
-- **Users** 👤: thông tin tài khoản (student, teacher, admin).  
-- **Subjects – Topics – StudyMaterials** 📚: quản lý môn học, chủ đề, tài liệu học.  
-- **Questions – Answers – QuestionTypes** ❓: ngân hàng câu hỏi và đáp án.  
-- **Exams – ExamQuestions – UserExams – ExamResults** 📝: hệ thống thi & kết quả.  
-- **PracticeTests – UserPractices – PracticeResults** 🧑‍🏫: thi thử và kết quả luyện tập.  
-- **ProgressTracker – StudySessions – Notes** 📊🗒️: theo dõi tiến độ và thời gian học.  
-- **Badges – UserBadges – Leaderboard – DailyChallenges – UserChallenges** 🏅🔥: gamification (huy hiệu, bảng xếp hạng, thử thách hằng ngày).  
-- **ChatGroups – ChatMessages – ForumQuestions – ForumAnswers – Meetings** 💬👨‍👩‍👧‍👦: tương tác, trao đổi học tập.  
-- **Feedbacks – Announcements – Payments – Subscriptions** 📨📢💳: quản trị hệ thống, gói học, góp ý, thông báo.  
-### 2.4. Form Login Code 🔑
-- **Frontend**: `index.html`, `styles.css`, `main.js` với form đăng nhập.  
-- **Backend**: API xử lý đăng nhập ⚙️, kiểm tra user/password trong bảng `users`.  
-- Đã viết **unit test** 🧪 cho module xác thực và **integration test** 🔍 cho form login.
----
-## 3. Quy trình làm việc 📋
-
-1. **Phân tích yêu cầu** 🔎  
-   - Actor: Student 👩‍🎓, Teacher 👨‍🏫, Admin 👨‍💼, System ⚙️.  
-   - Mô hình hóa nghiệp vụ bằng Use Case & Sequence Diagram.  
-
-2. **Thiết kế hệ thống** 🏗️  
-   - Dựa trên `DBMiniAppStudy.sql` để dựng ERD.  
-   - Xác định các module: User, Course, Exam, Practice, Communication.  
-
-3. **Lập trình & tích hợp** 💻  
-   - Xây dựng API CRUD cho users, subjects, exams.  
-   - Kết nối login form với backend (Express + MySQL).  
-   - Test chức năng exam + practice flow.  
-
-4. **Quản lý source code** 🔐  
-   - Dùng Git/GitHub, commit theo module.  
-   - Tag phiên bản v1.0.  
-
-5. **Kiểm thử** 🧪  
-   - Unit test: xác minh xử lý login, tính điểm.  
-   - Integration test: kiểm tra luồng login, làm bài thi.  
-   - Manual test: giao diện, database, chat.  
-
-6. **Báo cáo** 📝  
-   - Viết báo cáo Markdown, tổng hợp code, test case.  
+- Báo cáo này trình bày các **artifacts** và mô tả **quy trình làm việc** trong quá trình xây dựng hệ thống quản lý đặt phòng khách sạn.
+- Các nội dung bao gồm:
+  - Phân tích chức năng hệ thống
+  - Use Case Diagram, Sequence Diagram
+  - Source code giao diện đăng nhập (HTML, CSS, JS)
+  - Mô tả Use Case chuẩn UML
 
 ---
 
-## 4. Hướng dẫn push code & tạo tag version 🌐
+## 2. Phân tích mục tiêu hệ thống
 
-```bash
-# Cấu hình lần đầu
-git config --global user.name "Tên của bạn"
-git config --global user.email "email@example.com"
+- **Hệ thống lựa chọn**: Quản lý đặt phòng khách sạn
+- **Mục tiêu chính**:
+  - Hỗ trợ khách hàng tìm kiếm và đặt phòng
+  - Quản lý thông tin khách hàng và tình trạng phòng
+  - Hỗ trợ thanh toán và xác nhận đặt phòng
+- **Nhu cầu thực tế**:
+  - Đặt phòng nhanh chóng, chính xác
+  - Giảm sai sót trong quản lý
+  - Tối ưu trải nghiệm khách hàng
 
-# Thêm remote
-git remote add origin https://github.com/1yn3r/software-engineering-lab.git
+---
 
-# Push code
-git add .
-git commit -m "E-Learning 1.0"
-git push origin main
+## 3. Sơ đồ Use Case
 
-# Tạo tag v1.0
-git tag v1.0
-git push origin v1.0
+### 📌 Tổng quan hệ thống khách sạn
+![Use Case Tổng quan](../lab/lab02_usecase/use_case.png)
+
+---
+
+### 📌 Use Case chi tiết
+![Use Case chi tiết](../lab/lab03_ATM%20mini/USecaselab3.png)
+
+---
+
+## 4. Sequence Diagram
+![Sequence Diagram - Đặt phòng khách sạn](../lab/lab03_ATM%20mini/Sqlab3.png)
+
+---
+
+## 5. Source Code Giao Diện Đăng Nhập (Login Form)
+
+📁 **Thư mục chứa mã nguồn**:  
+![Ảnh mô tả Form Login](../lab/lab04/Ảnh%20mô%20tả.png)
+
+### 💻 Hướng dẫn chạy:
+- Form login được viết bằng **HTML, CSS, JavaScript**
+- Chức năng:
+  - Nhập Username/Password
+  - Nút Login, Cancel, Remember me
+  - Kiểm tra dữ liệu nhập cơ bản bằng JavaScript
+
+---
+
+## 6. Triển khai & Quản lý dự án
+
+- Toàn bộ artifacts (Use Case, Sequence, Form Login code) được gom lại trong báo cáo này.
+- File báo cáo viết bằng Markdown (có thể xuất PDF).
+- Quá trình làm việc được quản lý qua **GitHub**:
+  - Tạo repository riêng cho môn học
+  - Thực hiện push code, update README.md
+  - Tag version: **v1.0** để nộp bài
