@@ -45,7 +45,7 @@
 ## 5. Source Code Giao Diện Đăng Nhập (Login Form)
 
 📁 **Thư mục chứa mã nguồn**:  
-![Ảnh mô tả Form Login](../lab/lab04/Ảnh%20mô%20tả.png)
+https://github.com/n23dcpt094-phanngocthienminh/btapcnpm/tree/main/lab/lab04
 
 ### 💻 Hướng dẫn chạy:
 - Form login được viết bằng **HTML, CSS, JavaScript**
@@ -56,11 +56,3 @@
 
 ---
 
-## 6. Triển khai & Quản lý dự án
-
-- Toàn bộ artifacts (Use Case, Sequence, Form Login code) được gom lại trong báo cáo này.
-- File báo cáo viết bằng Markdown (có thể xuất PDF).
-- Quá trình làm việc được quản lý qua **GitHub**:
-  - Tạo repository riêng cho môn học
-  - Thực hiện push code, update README.md
-  - Tag version: **v1.0** để nộp bài
