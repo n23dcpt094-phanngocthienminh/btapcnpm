@@ -1,0 +1,36 @@
+📌 Giải thích đối tượng tham gia & thông điệp trao đổi
+1. Đối tượng tham gia (Actors & Participants)
+- Khách hàng (Customer)
+Người sử dụng hệ thống để tìm kiếm, đặt và thanh toán phòng khách sạn.
+Các hành động chính: Đăng nhập, tìm phòng, xem chi tiết, đặt phòng, thanh toán, hủy phòng.
+- Hệ thống Booking khách sạn (Booking System)
+Trung tâm xử lý toàn bộ nghiệp vụ.
+Các chức năng chính: xác thực người dùng, kiểm tra phòng trống, quản lý đặt phòng, kết nối với cổng thanh toán, gửi xác nhận cho khách hàng.
+- Cổng thanh toán (Payment Gateway)
+Hệ thống trung gian xử lý thanh toán online (ví dụ: VNPay, Momo, PayPal…).
+Vai trò: nhận yêu cầu thanh toán từ hệ thống → kiểm tra → trả về kết quả (thành công/thất bại).
+- Admin / Lễ tân (Admin/Receptionist)
+Người quản lý khách sạn, giám sát các booking.
+Nhiệm vụ: cập nhật thông tin phòng, xác nhận hoặc hủy booking, hỗ trợ khách hàng.
+2. Thông điệp trao đổi (Messages)
+
+🌐 Giữa Customer ↔ Booking System
+LoginRequest() / LoginResponse(): yêu cầu và xác nhận đăng nhập.
+SearchRoom(criteria): khách hàng tìm phòng theo ngày, giá, loại phòng.
+RoomList(): hệ thống trả về danh sách phòng trống.
+ViewRoomDetail(roomID): xem chi tiết phòng.
+BookRoom(roomID, date): gửi yêu cầu đặt phòng.
+CancelBooking(bookingID): hủy đơn đặt phòng.
+BookingConfirmation(): gửi xác nhận đặt phòng thành công.
+
+💳 Giữa Booking System ↔ Payment Gateway
+PaymentRequest(amount, bookingID): hệ thống gửi yêu cầu thanh toán.
+PaymentResponse(status, transactionID): cổng thanh toán trả kết quả (thành công/thất bại).
+
+🛠️ Giữa Booking System ↔ Admin
+SaveBooking(bookingInfo): lưu thông tin đặt phòng.
+ViewBookingList(): admin xem danh sách đơn đặt phòng.
+UpdateRoomStatus(): admin cập nhật tình trạng phòng (còn trống, đã đặt, bảo trì…).
+
+📌 Tóm lại:
+Customer khởi tạo yêu cầu → Booking System xử lý → kết nối với Payment Gateway nếu cần → lưu và gửi kết quả cho Admin + phản hồi cho Customer.

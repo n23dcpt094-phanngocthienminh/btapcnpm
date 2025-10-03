@@ -1,0 +1,31 @@
+Use Case Description
+Use Case 1: Đặt phòng (Book Room)
+- Tên Use Case: Book Room
+- Mục tiêu: Khách hàng đặt phòng khách sạn online.
+- Actor chính: Customer
+- Điều kiện tiên quyết: Khách hàng đã đăng nhập hệ thống.
+- Luồng chính:
+1. Khách hàng tìm kiếm phòng trống theo ngày nhận – trả phòng.
+2. Hệ thống hiển thị danh sách phòng phù hợp.
+3. Khách hàng chọn phòng và điền thông tin đặt phòng.
+4. Hệ thống tạo đơn đặt phòng và yêu cầu thanh toán.
+5. Khách hàng thực hiện thanh toán qua Payment System.
+6. Hệ thống xác nhận đặt phòng thành công.
+- Luồng thay thế:
+Nếu phòng hết hoặc thanh toán thất bại → thông báo lỗi cho khách hàng
+
+
+Use Case 2: Thanh toán (Make Payment)
+- Tên Use Case: Make Payment
+- Mục tiêu: Xử lý giao dịch thanh toán cho đơn đặt phòng.
+- Actor chính: Customer
+- Actor phụ: Payment System
+- Điều kiện tiên quyết: Có đơn đặt phòng cần thanh toán.
+- Luồng chính:
+1. Hệ thống hiển thị chi tiết đơn đặt phòng và số tiền cần thanh toán.
+2. Khách hàng chọn phương thức thanh toán (thẻ tín dụng, ví điện tử, ngân hàng online).
+3. Hệ thống gửi yêu cầu đến Payment System.
+4. Payment System xử lý và phản hồi kết quả (thành công/thất bại).
+5. Nếu thành công, hệ thống xác nhận đơn đặt phòng và lưu trạng thái đã thanh toán.
+- Luồng thay thế:
+Nếu Payment System báo lỗi → hiển thị thông báo thất bại, cho phép thử lại.
