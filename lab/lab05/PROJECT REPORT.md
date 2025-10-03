@@ -28,7 +28,7 @@
 ## 3. Sơ đồ Use Case
 
 ### 📌 Tổng quan hệ thống khách sạn
-![Use Case Tổng quan](../lab/lab02_usecase/use_case.png)
+![Use Case Tổng quan](https://github.com/n23dcpt094-phanngocthienminh/btapcnpm/blob/main/lab/lab02_usecase/use_case.png?raw=true)
 
 ---
 
